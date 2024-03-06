@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CS GFA 3: RANDOM NUMBER GENERATOR</title>
+</head>
+<body>
+    <script>
+        var randN = Math.floor(Math.random()*1000);
+        var randS = randN.toString();
+        var size = randS.length;
+
+        if (size == 4)
+        {
+            var thousands = randS[0]
+            document.write("Randomly Generated Number: " + randS + "<br>" + "Breakdown: " + thousands + "000, " + "0, 0, 0"); 
+
+            var d = new Date().toUTCString();
+            document.write("<br>" + d)
+        }
+
+        if (size == 3)
+        {
+            var hundreds = randS[0]
+            var tensS = randS[1]
+            var tensN = parseInt(tensS) * 10;
+            var ones = randS[2]
+            document.write("Randomly Generated Number: " + randS + "<br>" + "Breakdown: " + "0, " + hundreds + "00, " + tensN +", " + ones); 
+           
+            var d = new Date().toUTCString();
+            document.write("<br>" +  d)
+        }
+
+        if (size == 2)
+        {
+            var tens = randS[0]
+            var ones = randS[1]
+            document.write("Randomly Generated Number: " + randS + "<br>" + "Breakdown: " + "0, 0, " + tens + "0, " + ones); 
+            
+            var d = new Date().toUTCString();
+            document.write("<br>" + d)
+        }
+
+        if (size == 1)
+        {
+            var ones = randS[0]
+            document.write("Randomly Generated Number: " + randS + "<br>" + "Breakdown: " + "0, 0, 0, " + ones); 
+            
+            var d = new Date().toUTCString();
+            document.write("<br>" + d)
+        }
+    </script>
+</body>
+</html>
